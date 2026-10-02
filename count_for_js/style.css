@@ -1,7 +1,7 @@
 :root{
     font-family: 'Courier New', Courier, monospace;
     --color-leter:rgb(24, 24, 23);
-    --color-back:rgb(255, 143, 30)
+    --color-back:rgb(255, 65, 230);
 }
 
 *{
@@ -28,6 +28,11 @@
 
 .main > div{
     width: 300px;
-    height: 200px;
 }
 
+#btn{
+    display: block;
+    width: 100px;
+    padding: 20px;
+    background-color: ;
+}

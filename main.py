@@ -1,18 +1,25 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from flask import Flask, jsonify
+from flask_cors import CORS
 
-app = FastAPI()
-
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app = Flask(__name__)
+CORS(app)
 
 contador = 0
 
-@app.get("/contador")
-def obtener():
-    return {"contador": contador}
 
-@app.put("/contador/{valor}")
-def actualizar(valor: int):
+@app.route("/contador", methods=["GET"])
+def obtener():
+    return jsonify({"contador": contador})
+
+
+@app.route("/contador/<int:valor>", methods=["PUT"])
+def actualizar(valor):
     global contador
+
     contador = valor
-    return {"contador": contador}
+
+    return jsonify({"contador": contador})
+
+
+if __name__ == "__main__":
+    app.run(debug=True,port=8000)

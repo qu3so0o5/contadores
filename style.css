@@ -1,7 +1,8 @@
 :root{
     font-family: 'Courier New', Courier, monospace;
     --color-leter: rgb(24, 24, 23);
-    --color-back: rgb(255, 143, 30)
+    --color-back: rgb(255, 143, 30); 
+    --color-back2:rgb(255, 65, 230);
 }
 
 *{
@@ -28,5 +29,20 @@
 
 .main > div{
     width: 300px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn{
+    display: block;
+    width: 200px;
+    padding: 20px;
+    background-color:var(--color-back2);
+    border: 1px solid var(--color-back2);
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    color:var(--color-leter);
 }
