@@ -1,0 +1,33 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+    --color-leter:rgb(24, 24, 23);
+    --color-back:rgb(255, 143, 30)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#count{
+    text-shadow: 0 0 2px #fff1;
+    font-size: 200px;
+    font-weight: bolder;
+    color: var(--color-leter);
+    text-align: center;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > div{
+    width: 300px;
+    height: 200px;
+}
+
